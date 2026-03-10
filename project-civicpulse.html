@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUI Design System — Joey Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Joey Morgan</a>
+      <div class="nav-links">
+        <a href="index.html">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <a href="index.html" class="back-link">&larr; Back to all projects</a>
+    <h1>AUI Design System</h1>
+    <div class="meta">
+      <div><strong>Role:</strong> Senior Product Designer / Lead</div>
+      <div><strong>Timeline:</strong> Ongoing</div>
+      <div><strong>Team:</strong> Product designers, front-end developers, product owners</div>
+      <div><strong>Tools:</strong> Figma, Storybook</div>
+    </div>
+    <div class="project-hero-img placeholder-img ph-3" style="aspect-ratio:16/8; border-radius:12px;">AUI Components Library</div>
+  </section>
+
+  <div class="metrics-banner">
+    <div class="metrics-grid">
+      <div class="metric">
+        <span class="number">120+</span>
+        <span class="label">Components Built</span>
+      </div>
+      <div class="metric">
+        <span class="number">60%</span>
+        <span class="label">Faster Design-to-Dev</span>
+      </div>
+      <div class="metric">
+        <span class="number">4</span>
+        <span class="label">Products Powered</span>
+      </div>
+      <div class="metric">
+        <span class="number">100%</span>
+        <span class="label">WCAG 2.1 AA Compliance</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="project-content">
+
+    <h2>Overview</h2>
+    <p>Toshiba has a handful of web-based administration products: retail management, device configuration, security monitoring, store operations. The thing is, they were all designed in isolation. Every product had its own button styles, its own table patterns, its own way of handling modals. Developers were rebuilding the same components from scratch every time a new project kicked off, and the user experience across the suite felt disconnected.</p>
+    <p>I led the creation of the AUI (Administration UI) Design System. It's a unified component library in Figma that acts as the single source of truth for all of Toshiba's web-based admin products. The goal was pretty straightforward: make things consistent, speed up delivery, and get accessibility right across the board.</p>
+
+    <div class="image-row">
+      <div class="placeholder-img ph-3" style="border-radius:12px; aspect-ratio:4/3;">Component Overview</div>
+      <div class="placeholder-img ph-1" style="border-radius:12px; aspect-ratio:4/3;">Token Architecture</div>
+    </div>
+
+    <h2>The Problem</h2>
+    <p>Before the design system, every new feature or product meant starting from zero. No shared components, no shared patterns. It created a bunch of problems that just kept stacking up:</p>
+    <ul>
+      <li>Designers were spending 30–40% of their time recreating basic UI elements instead of actually solving user problems</li>
+      <li>Developers would get inconsistent specs. The same "data table" looked and behaved differently depending on which product you were looking at</li>
+      <li>Accessibility was always something we'd "get to later." No standardized contrast ratios, no focus states, no keyboard navigation patterns</li>
+      <li>Onboarding new designers or developers took weeks because there was nothing to point them to</li>
+    </ul>
+
+    <h2>Building the Foundation</h2>
+    <p>I started by auditing every existing admin product and cataloging every unique component variant I could find. The results were pretty eye-opening: 14 different button styles, 8 table patterns, and 6 modal implementations. Most of them were doing the same thing with slight visual differences.</p>
+    <p>From there, I built out the system architecture:</p>
+    <ul>
+      <li><strong>Design Tokens:</strong> Color, typography, spacing, elevation, and border-radius tokens that define the visual language. Every component references tokens instead of hard-coded values, so when something needs to change, it changes everywhere at once.</li>
+      <li><strong>Core Components:</strong> Buttons, inputs, selects, checkboxes, radio buttons, toggles, tooltips, badges, and tags. All built with variant properties for size, state, and type.</li>
+      <li><strong>Pattern Components:</strong> Data tables with sorting/filtering/pagination, modals and dialogs, side panels, navigation bars, breadcrumbs, steppers, tabs, and card layouts.</li>
+      <li><strong>Chart Components:</strong> Bar charts, line charts, donut charts, and KPI cards. A lot of this came out of the Security Suite dashboard work and was standardized so any reporting product could use them.</li>
+    </ul>
+
+    <div class="image-row">
+      <div class="placeholder-img ph-4" style="border-radius:12px; aspect-ratio:4/3;">Core Components</div>
+      <div class="placeholder-img ph-2" style="border-radius:12px; aspect-ratio:4/3;">Data Table Variants</div>
+    </div>
+
+    <h2>Accessibility First</h2>
+    <p>One thing I was really intentional about was building accessibility in from the start rather than trying to bolt it on later. Every component meets WCAG 2.1 AA standards out of the box:</p>
+    <ul>
+      <li>Minimum 4.5:1 contrast ratios for all text, validated across light and dark surface contexts</li>
+      <li>Visible focus indicators on every interactive element for keyboard navigation</li>
+      <li>ARIA labeling guidance documented alongside each component</li>
+      <li>No status is conveyed by color alone. There's always a secondary indicator</li>
+    </ul>
+
+    <h2>Adoption &amp; Governance</h2>
+    <p>You can build the most beautiful design system in the world, but if nobody uses it, it doesn't matter. Getting adoption right was just as important as getting the components right:</p>
+    <ul>
+      <li>Any designer can propose new components or variants through a lightweight review process. It's not gatekept</li>
+      <li>Every component has documentation covering usage guidelines, do's and don'ts, and developer handoff specs</li>
+      <li>Regular syncs with front-end developers to make sure Figma components actually mapped to what they were building</li>
+      <li>Version-controlled releases so teams could upgrade on their own schedule without breaking what they already shipped</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>Here's where we landed:</p>
+    <ul>
+      <li>Design-to-development handoff time dropped by about 60%. Developers get consistent, spec-ready components now</li>
+      <li>4 products are built on the shared system: Security Suite, Administration Panel, Store Operations, and Device Management</li>
+      <li>New designer onboarding went from weeks to days. The library basically documents itself</li>
+      <li>Accessibility compliance across all products using the system, which means no more scrambling to fix things after the fact</li>
+      <li>The library grew to 120+ components with variants covering pretty much everything an admin UI needs</li>
+    </ul>
+
+    <div class="ux-takeaways">
+      <h2>UX Perspectives &amp; Best Practices</h2>
+      <ul class="takeaway-list">
+        <li>
+          <span class="takeaway-num">01</span>
+          <span><strong>Audit before you architect.</strong> Going through every existing product and cataloging every unique component showed me the real scope of the problem. It also gave me hard data to make the case for the investment. Stakeholders don't fund "let's make things consistent." They fund "we're rebuilding the same button 14 times."</span>
+        </li>
+        <li>
+          <span class="takeaway-num">02</span>
+          <span><strong>Tokens are the real product.</strong> Components get the attention, but design tokens are what make the whole thing scale. When leadership asked for a dark mode exploration, I could mock it up in hours because every component referenced tokens, not hard-coded hex values.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">03</span>
+          <span><strong>Adoption requires more than availability.</strong> Publishing a Figma library doesn't mean people will use it. Regular syncs, clear documentation, and a low-friction contribution model turned it from "that library Joey made" into something the whole team owns.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">04</span>
+          <span><strong>Build accessibility into the foundation.</strong> When WCAG compliance lives at the component level, every product that uses the system is accessible by default. It killed the "we'll fix accessibility later" excuse because later was already handled.</span>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Joey Morgan. <a href="index.html">Back to home</a></p>
+  </footer>
+
+</body>
+</html>

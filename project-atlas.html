@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Finance — Joey Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Joey Morgan</a>
+      <div class="nav-links">
+        <a href="index.html">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <a href="index.html" class="back-link">&larr; Back to all projects</a>
+    <h1>Atlas Finance — Budget Tracking Redesign</h1>
+    <div class="meta">
+      <div><strong>Role:</strong> Senior Product Designer</div>
+      <div><strong>Timeline:</strong> 10 weeks</div>
+      <div><strong>Team:</strong> 2 designers, 6 engineers, 1 PM</div>
+      <div><strong>Tools:</strong> Figma, FullStory, Lookback</div>
+    </div>
+    <div class="project-hero-img placeholder-img ph-4" style="aspect-ratio:16/8; border-radius:12px;">Atlas Finance Hero</div>
+  </section>
+
+  <div class="metrics-banner">
+    <div class="metrics-grid">
+      <div class="metric">
+        <span class="number">32%</span>
+        <span class="label">Retention Increase</span>
+      </div>
+      <div class="metric">
+        <span class="number">2.3x</span>
+        <span class="label">Daily Logging Frequency</span>
+      </div>
+      <div class="metric">
+        <span class="number">63%</span>
+        <span class="label">Exit Rate Reduction</span>
+      </div>
+      <div class="metric">
+        <span class="number">4.5★</span>
+        <span class="label">App Store Rating</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="project-content">
+    <h2>The Challenge</h2>
+    <p>Atlas Finance is a personal budgeting app with 180,000 monthly active users. Acquisition was strong, but engagement was falling off. 44% of users stopped logging transactions within two weeks. The budget overview screen was the most visited page in the app, but it also had the highest exit rate. People were showing up and then leaving.</p>
+    <p>I was brought on to redesign the budget tracking experience to fix that drop-off and help users actually stick with the app.</p>
+
+    <h2>Research &amp; Discovery</h2>
+    <p>I dug into FullStory sessions, analyzed the drop-off funnels, and ran 12 user interviews across three segments: budgeting beginners, intermediate trackers, and power users. A few things became really clear:</p>
+    <ul>
+      <li>The budget overview showed too many categories at once. Users felt overwhelmed and, honestly, guilty</li>
+      <li>Beginners didn't understand the difference between "spent" and "committed" amounts</li>
+      <li>There was zero positive reinforcement. Users only ever saw what they overspent, never what they saved</li>
+      <li>The transaction logging flow was buried 3 taps deep, so it felt like a chore every time</li>
+    </ul>
+
+    <div class="image-row">
+      <div class="placeholder-img ph-4" style="border-radius:12px; aspect-ratio:4/3;">Drop-off Funnel</div>
+      <div class="placeholder-img ph-2" style="border-radius:12px; aspect-ratio:4/3;">Interview Themes</div>
+    </div>
+
+    <h2>Design Process</h2>
+    <p>I reframed the budget overview around three ideas:</p>
+    <ul>
+      <li><strong>Progress over perfection:</strong> Show people how far they've come, not just where they fell short</li>
+      <li><strong>Focus over overwhelm:</strong> Surface 3 key categories, let them drill into the rest if they want to</li>
+      <li><strong>Action over observation:</strong> Make logging a transaction as easy as sending a text message</li>
+    </ul>
+    <p>I prototyped a new overview that leads with a "monthly health score," which is just a single, encouraging metric. Below that, a focused view of the user's top 3 spending categories. And a floating action button for one-tap transaction logging so you don't have to go hunting for it.</p>
+    <p>I tested 3 iterations with 15 users, refining the health score visualization and quick-log flow each time.</p>
+
+    <div class="image-row">
+      <div class="placeholder-img ph-1" style="border-radius:12px; aspect-ratio:4/3;">Budget Overview Concepts</div>
+      <div class="placeholder-img ph-4" style="border-radius:12px; aspect-ratio:4/3;">Quick Log Flow</div>
+    </div>
+
+    <h2>Final Design</h2>
+    <p>Here's what shipped:</p>
+    <ul>
+      <li>Monthly health score with encouraging copy and a progress ring animation</li>
+      <li>Focused category view (top 3) with an expandable full breakdown</li>
+      <li>Floating quick-log button with smart category prediction</li>
+      <li>Weekly "wins" notifications that celebrate savings milestones</li>
+      <li>Simplified terminology with contextual help tooltips for beginners</li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>We rolled it out via feature flag to 50% of users over 6 weeks:</p>
+    <ul>
+      <li>2-week retention went from 56% to 74%</li>
+      <li>Daily transaction logging frequency increased 2.3x</li>
+      <li>Budget overview exit rate dropped from 38% to 14%</li>
+      <li>App Store rating went from 3.8 to 4.5 stars</li>
+      <li>NPS jumped from +22 to +51</li>
+    </ul>
+
+    <h2>Reflection</h2>
+    <p>The biggest thing I learned here is how emotional financial tools are. Traditional budgeting apps are all about precision and control, but what users actually needed was encouragement. Momentum. The health score was controversial internally. Some stakeholders thought it oversimplified the data. But testing showed that one motivating metric drove way more engagement than a detailed breakdown ever did. Sometimes you have to design for how people feel, not just what they need to see.</p>
+
+    <div class="ux-takeaways">
+      <h2>UX Perspectives &amp; Best Practices</h2>
+      <ul class="takeaway-list">
+        <li>
+          <span class="takeaway-num">01</span>
+          <span><strong>Design for how people feel.</strong> Financial tools carry shame, anxiety, and guilt. Replacing an overwhelming budget grid with one encouraging "health score" drove a 32% retention lift. Users finally felt good about opening the app.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">02</span>
+          <span><strong>Show less to communicate more.</strong> Showing 3 key categories instead of 12+ didn't remove data. It prioritized it. Users who wanted the full breakdown could expand. The default experience stayed clean without sacrificing depth.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">03</span>
+          <span><strong>Make the core action easy to find.</strong> Transaction logging was buried 3 taps deep. Moving it to a floating action button with smart category prediction made the habit-forming action feel instant. If the thing you want users to do most is hard to get to, they won't do it.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">04</span>
+          <span><strong>Celebrate the wins.</strong> Weekly "wins" notifications about savings milestones turned budgeting from a chore into something users actually looked forward to. They came back not because they had to, but because they wanted to see how they were doing.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Joey Morgan. <a href="index.html">Back to home</a></p>
+  </footer>
+
+</body>
+</html>
