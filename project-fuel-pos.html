@@ -131,12 +131,6 @@
     <p><strong>Prototyping:</strong> Figma Make AI accelerated the prototyping phase. I could describe interactions and layout ideas and get working concepts to iterate on quickly. Claude Code helped me build out the interactive prototype that we used for customer demos. The combination of both tools meant I was producing polished, testable work at a pace that would normally require a bigger team.</p>
     <p>AI didn't replace the design thinking. It removed the busywork so I could spend more time on the decisions that actually mattered.</p>
 
-    <h2>Interactive Prototype</h2>
-    <p>Here's a clickable prototype of the redesigned flow. Feel free to tap through it.</p>
-    <div class="prototype-embed">
-      <iframe src="https://pogo-cafe-50517232.figma.site/" title="Fuel POS Interactive Prototype" allowfullscreen></iframe>
-    </div>
-
     <h2>Results &amp; Impact</h2>
     <p>Internal testing and customer demos validated the redesign across the board:</p>
     <ul>
@@ -174,6 +168,25 @@
   <footer>
     <p>&copy; 2026 Joey Morgan. <a href="index.html">Back to home</a></p>
   </footer>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.project-content .image-row img, .project-hero .hero-mockup img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('active'); });
+  </script>
 
 </body>
 </html>

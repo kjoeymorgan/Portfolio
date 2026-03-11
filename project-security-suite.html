@@ -145,30 +145,8 @@
     <p>We ran a card sorting exercise to figure out how users mentally grouped the dashboard content. Task 1 had participants organize all the charts and data points into categories that made sense to them. Task 2 tested whether the Leon (Loss Prevention) and Olivia (Operations) persona views actually mapped to how real users thought about the data.</p>
 
     <div class="image-row">
-      <div class="laptop-mockup">
-        <div class="device-mockup">
-          <div class="browser-bar">
-            <span class="browser-dot red"></span>
-            <span class="browser-dot yellow"></span>
-            <span class="browser-dot green"></span>
-            <span class="browser-url">card-sorting/tasks</span>
-          </div>
-          <img src="SS_CardSorting.jpg" alt="Card Sorting Exercise — Tasks 1 and 2">
-        </div>
-        <div class="laptop-base"></div>
-      </div>
-      <div class="laptop-mockup">
-        <div class="device-mockup">
-          <div class="browser-bar">
-            <span class="browser-dot red"></span>
-            <span class="browser-dot yellow"></span>
-            <span class="browser-dot green"></span>
-            <span class="browser-url">card-sorting/analysis</span>
-          </div>
-          <img src="SS_CardSortingAnalysis.jpg" alt="Card Sorting Analysis — Participant Groupings">
-        </div>
-        <div class="laptop-base"></div>
-      </div>
+      <img src="SS_CardSorting.jpg" alt="Card Sorting Exercise — Tasks 1 and 2" style="width:100%; border-radius: var(--radius-sm);">
+      <img src="SS_CardSortingAnalysis.jpg" alt="Card Sorting Analysis — Participant Groupings" style="width:100%; border-radius: var(--radius-sm);">
     </div>
 
     <p>The analysis pulled together results from each participant and identified which charts were common across all of them, which showed up for two out of three, and which were unique to individual participants. This gave us a clear, data-backed picture of what belonged on the dashboard and what could be cut or moved to a secondary view.</p>
@@ -218,6 +196,25 @@
   <footer>
     <p>&copy; 2026 Joey Morgan. <a href="index.html">Back to home</a></p>
   </footer>
+
+  <div class="lightbox-overlay" id="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <img src="" alt="">
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    document.querySelectorAll('.project-content .image-row img, .project-hero .hero-mockup img').forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+    });
+    lightbox.addEventListener('click', () => lightbox.classList.remove('active'));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('active'); });
+  </script>
 
 </body>
 </html>

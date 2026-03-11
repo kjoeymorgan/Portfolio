@@ -958,7 +958,7 @@ footer a {
 /* ===== Findings Cards ===== */
 .findings {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 2.5rem 0;
 }
@@ -1011,6 +1011,56 @@ footer a {
   border: none;
 }
 
+/* ===== Lightbox ===== */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+.lightbox-close:hover {
+  opacity: 1;
+}
+
+.project-content .image-row img,
+.project-hero .hero-mockup img {
+  cursor: zoom-in;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .services { grid-template-columns: repeat(2, 1fr); }
@@ -1021,6 +1071,7 @@ footer a {
   .about { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-photo { max-width: 220px; }
   .project-content .image-row { grid-template-columns: 1fr; margin-left: 0; margin-right: 0; }
+  .findings { grid-template-columns: 1fr; }
   .contact { flex-direction: column; text-align: center; margin-left: 1rem; margin-right: 1rem; }
   .contact .contact-right { align-items: center; }
   .section-header { flex-direction: column; align-items: flex-start; }
