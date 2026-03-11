@@ -542,7 +542,14 @@ footer a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin: 2.5rem 0;
+  margin: 2.5rem -10%;
+}
+
+.project-content .image-row:has(> :only-child) {
+  grid-template-columns: 1fr;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .project-content .image-row .placeholder-img {
@@ -1008,7 +1015,7 @@ footer a {
   .hero { min-height: 420px; margin-top: 68px; margin-left: 1rem; margin-right: 1rem; padding: 2.5rem; }
   .about { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-photo { max-width: 220px; }
-  .project-content .image-row { grid-template-columns: 1fr; }
+  .project-content .image-row { grid-template-columns: 1fr; margin-left: 0; margin-right: 0; }
   .contact { flex-direction: column; text-align: center; margin-left: 1rem; margin-right: 1rem; }
   .contact .contact-right { align-items: center; }
   .section-header { flex-direction: column; align-items: flex-start; }
