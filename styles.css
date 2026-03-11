@@ -295,6 +295,11 @@ nav .nav-links a.active { color: var(--text); }
   color: #fff;
   margin-bottom: 1.25rem;
 }
+.service-icon img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
 
 .service-card h3 {
   font-size: 0.95rem;
