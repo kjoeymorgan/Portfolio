@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cash Management — Joey Morgan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Joey Morgan</a>
+      <div class="nav-links">
+        <a href="index.html">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="project-hero">
+    <a href="index.html" class="back-link">&larr; Back to all projects</a>
+    <h1>Cash Management</h1>
+    <div class="meta">
+      <div><strong>Role:</strong> Senior Product Designer</div>
+      <div><strong>Timeline:</strong> Ongoing</div>
+      <div><strong>Team:</strong> Product designers, developers, product owners</div>
+      <div><strong>Tools:</strong> Figma, Miro</div>
+    </div>
+    <div class="laptop-mockup hero-mockup">
+      <div class="device-mockup">
+        <div class="browser-bar">
+          <span class="browser-dot red"></span>
+          <span class="browser-dot yellow"></span>
+          <span class="browser-dot green"></span>
+          <span class="browser-url">admin.toshiba.com/cash-management</span>
+        </div>
+        <img src="CM_Dashboard.jpg" alt="Cash Management Dashboard">
+      </div>
+      <div class="laptop-base"></div>
+    </div>
+  </section>
+
+  <div class="metrics-banner">
+    <div class="metrics-grid">
+      <div class="metric">
+        <span class="number">3</span>
+        <span class="label">Core Flows Designed</span>
+      </div>
+      <div class="metric">
+        <span class="number">50%</span>
+        <span class="label">Fewer Steps to Audit</span>
+      </div>
+      <div class="metric">
+        <span class="number">1</span>
+        <span class="label">Unified Dashboard</span>
+      </div>
+      <div class="metric">
+        <span class="number">100%</span>
+        <span class="label">AUI System Compliance</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="project-content">
+
+    <h2>Overview</h2>
+    <p>Cash Management is one of Toshiba's administration products that lives inside the broader Admin platform. It's the tool store managers and back-office staff use to keep track of everything cash-related: tills, safe balances, audits, deposits, reconciliation. Basically, all the money moving through a retail store on any given day.</p>
+    <p>The problem was that this workflow was scattered. Managers were jumping between screens to check till statuses, manually tracking safe balances, and running audits through a process that took way more steps than it needed to. I was brought on to design a centralized experience that pulled all of this into one place and made the day-to-day operations faster and less error-prone.</p>
+
+    <div class="image-row">
+      <div class="laptop-mockup">
+        <div class="device-mockup">
+          <div class="browser-bar">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+            <span class="browser-url">cash-management/dashboard</span>
+          </div>
+          <img src="CM_Dashboard.jpg" alt="Cash Management Dashboard">
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+      <div class="laptop-mockup">
+        <div class="device-mockup">
+          <div class="browser-bar">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+            <span class="browser-url">cash-management/tills</span>
+          </div>
+          <img src="CM_ActiveTills.jpg" alt="Active Tills View">
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+    </div>
+
+    <h2>The Challenge</h2>
+    <p>Retail cash operations are one of those things that sound simple until you actually look at what's involved. A single store might have 15 tills running across multiple terminals, a safe that needs to be audited and reconciled daily, deposits that need to be tracked, and loan amounts that need to be monitored. And the people managing all of this are doing it while also running the store.</p>
+    <p>Here's what we were dealing with:</p>
+    <ul>
+      <li>There was no single view of cash operations. Till statuses, safe balances, and sales volume lived on different screens with no connection between them</li>
+      <li>Till status indicators weren't clear. Managers couldn't quickly tell the difference between an active till, one that needed reconciliation, and one that had an error</li>
+      <li>The audit process for counting cash was long and clunky. Counting bills, coins, checks, and miscellaneous items all happened through separate workflows instead of one guided flow</li>
+      <li>Safe alerts like "Deposit Needed" weren't surfaced prominently. Managers would miss them and end up with too much cash sitting in the safe</li>
+    </ul>
+
+    <h2>Design Approach</h2>
+    <p>I approached this the same way I approach most enterprise tools: figure out what the user needs to see first, what they need to do most often, and make those two things as easy as possible.</p>
+    <p>The dashboard became the centerpiece. I designed it to give managers a complete picture of their store's cash health in one glance:</p>
+    <ul>
+      <li><strong>Overall Sales Volume:</strong> A line chart showing sales trends over the accounting period with the ability to toggle between daily, weekly, and monthly views. This gives managers context for what's happening with the money before they dig into specifics</li>
+      <li><strong>Safe Card:</strong> The current safe balance, last audit and reconciliation dates, and operating fund amount. Plus quick-action buttons for Deposit, Audit, and Reconcile right there on the card. If the safe balance exceeds the threshold, a "Deposit Needed" alert shows up and you can't miss it</li>
+      <li><strong>Active Tills:</strong> A summary table showing every active till with color-coded status badges. Red for error, green for active, yellow for reconcile needed. Managers can open a till directly from this view</li>
+      <li><strong>Tills Status:</strong> Donut charts showing how many tills and terminals are currently in use versus total available. Quick visual check without counting rows in a table</li>
+    </ul>
+
+    <h2>Tills Detail View</h2>
+    <p>When managers need more detail, the Tills page gives them the full picture. It's a data table with every till across the store: terminal number, status, start time, last audit, operator, loan amount, and balances. Tabs let you switch between Active Tills and History so you can see what's happening now or look back at closed tills from previous shifts.</p>
+    <p>The "Open Till" action sits in the top right. Search and filter are right there. Nothing is buried. The whole thing was built using components from the AUI Design System, so it's consistent with every other table in the Admin platform.</p>
+
+    <div class="image-row">
+      <div class="laptop-mockup">
+        <div class="device-mockup">
+          <div class="browser-bar">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+            <span class="browser-url">cash-management/tills/audit</span>
+          </div>
+          <img src="CM_Audit.jpg" alt="Audit Till Flow">
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+    </div>
+
+    <h2>Audit Flow</h2>
+    <p>The audit flow was probably the biggest improvement. Previously, counting a till involved navigating through multiple screens and manually entering totals without much structure. I redesigned it as a single-page guided form that walks the user through every category of cash in the till:</p>
+    <ul>
+      <li><strong>Cash:</strong> Bills by denomination ($1 through $100) and change by type (pennies through quarters), each with quantity and total amount fields. The actual amount from the system is shown at the top so you can compare as you count</li>
+      <li><strong>Checks:</strong> Add checks by type with individual amounts. Running total calculates automatically</li>
+      <li><strong>Miscellaneous Quantity:</strong> Online MO, manufacturer coupons, smartcard MO. Things that aren't cash but still need to be counted</li>
+      <li><strong>Miscellaneous Funds &amp; Foreign Currency:</strong> Vouchers and foreign currency entries for stores that handle international payments</li>
+    </ul>
+    <p>The whole thing has a Pause button so the user can step away without losing their count, and a Continue button to submit. No more starting over because you had to help a customer mid-audit.</p>
+
+    <h2>Results</h2>
+    <p>Cash Management shipped as part of the Toshiba Administration platform. Here's what changed:</p>
+    <ul>
+      <li>The dashboard consolidated what used to take 3-4 separate screens into a single view</li>
+      <li>Till status is now readable at a glance with color-coded badges instead of text-only indicators</li>
+      <li>The audit flow cut the number of steps roughly in half by putting everything on one structured page</li>
+      <li>Safe deposit alerts are now front and center on the dashboard, reducing the chance of managers missing a required deposit</li>
+      <li>Built entirely on the AUI Design System, so every component is consistent with the rest of the Admin suite</li>
+    </ul>
+
+    <div class="ux-takeaways">
+      <h2>UX Perspectives &amp; Best Practices</h2>
+      <ul class="takeaway-list">
+        <li>
+          <span class="takeaway-num">01</span>
+          <span><strong>Give people the full picture first.</strong> Store managers don't want to click through five screens to understand what's happening with cash today. The dashboard puts sales, safe status, and till activity all in one view. Context before detail.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">02</span>
+          <span><strong>Color-coded status works when it's consistent.</strong> Red, yellow, green means the same thing across the dashboard, the till table, and every other product in the Admin suite. Once users learn the vocabulary once, they can scan any screen instantly.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">03</span>
+          <span><strong>Long forms need structure, not fewer fields.</strong> The audit flow has a lot of inputs. The answer wasn't to remove fields. It was to organize them into clear sections with running totals so the user always knows where they are and what's left.</span>
+        </li>
+        <li>
+          <span class="takeaway-num">04</span>
+          <span><strong>Design for interruption.</strong> Retail staff get pulled away constantly. The Pause button on the audit flow was a small addition, but it meant the difference between finishing an audit and having to start over from scratch.</span>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Joey Morgan. <a href="index.html">Back to home</a></p>
+  </footer>
+
+</body>
+</html>
