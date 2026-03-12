@@ -68,8 +68,8 @@
   <section class="project-content">
 
     <h2>Overview</h2>
-    <p>Cash Management is one of the company's administration products that lives inside the broader Admin platform. It's the tool store managers and back-office staff use to keep track of everything cash-related: tills, safe balances, audits, deposits, reconciliation. Basically, all the money moving through a retail store on any given day.</p>
-    <p>The problem was that this workflow was scattered. Managers were jumping between screens to check till statuses, manually tracking safe balances, and running audits through a process that took way more steps than it needed to. I was brought on to design a centralized experience that pulled all of this into one place and made the day-to-day operations faster and less error-prone.</p>
+    <p>Cash Management is one of the company's administration products that lives inside the broader Admin platform. It's the tool store managers and back-office staff use to keep track of <strong>everything cash-related: tills, safe balances, audits, deposits, reconciliation.</strong> Basically, all the money moving through a retail store on any given day.</p>
+    <p>The problem was that this workflow was scattered. Managers were jumping between screens to check till statuses, manually tracking safe balances, and running audits through a process that took way more steps than it needed to. I was brought on to <strong>design a centralized experience</strong> that pulled all of this into one place and made the day-to-day operations <strong>faster and less error-prone.</strong></p>
 
     <div class="image-row">
       <div class="laptop-mockup">
@@ -102,15 +102,15 @@
     <p>Retail cash operations are one of those things that sound simple until you actually look at what's involved. A single store might have 15 tills running across multiple terminals, a safe that needs to be audited and reconciled daily, deposits that need to be tracked, and loan amounts that need to be monitored. And the people managing all of this are doing it while also running the store.</p>
     <p>Here's what we were dealing with:</p>
     <ul>
-      <li>There was no single view of cash operations. Till statuses, safe balances, and sales volume lived on different screens with no connection between them</li>
-      <li>Till status indicators weren't clear. Managers couldn't quickly tell the difference between an active till, one that needed reconciliation, and one that had an error</li>
-      <li>The audit process for counting cash was long and clunky. Counting bills, coins, checks, and miscellaneous items all happened through separate workflows instead of one guided flow</li>
-      <li>Safe alerts like "Deposit Needed" weren't surfaced prominently. Managers would miss them and end up with too much cash sitting in the safe</li>
+      <li><strong>No single view of cash operations.</strong> Till statuses, safe balances, and sales volume lived on different screens with no connection between them</li>
+      <li><strong>Till status indicators weren't clear.</strong> Managers couldn't quickly tell the difference between an active till, one that needed reconciliation, and one that had an error</li>
+      <li><strong>The audit process was long and clunky.</strong> Counting bills, coins, checks, and miscellaneous items all happened through separate workflows instead of one guided flow</li>
+      <li><strong>Safe alerts weren't surfaced prominently.</strong> Managers would miss them and end up with too much cash sitting in the safe</li>
     </ul>
 
     <h2>Design Approach</h2>
-    <p>I approached this the same way I approach most enterprise tools: figure out what the user needs to see first, what they need to do most often, and make those two things as easy as possible.</p>
-    <p>The dashboard became the centerpiece. I designed it to give managers a complete picture of their store's cash health in one glance:</p>
+    <p>I approached this the same way I approach most enterprise tools: <strong>figure out what the user needs to see first, what they need to do most often, and make those two things as easy as possible.</strong></p>
+    <p>The dashboard became the centerpiece. I designed it to give managers <strong>a complete picture of their store's cash health in one glance:</strong></p>
     <ul>
       <li><strong>Overall Sales Volume:</strong> A line chart showing sales trends over the accounting period with the ability to toggle between daily, weekly, and monthly views. This gives managers context for what's happening with the money before they dig into specifics</li>
       <li><strong>Safe Card:</strong> The current safe balance, last audit and reconciliation dates, and operating fund amount. Plus quick-action buttons for Deposit, Audit, and Reconcile right there on the card. If the safe balance exceeds the threshold, a "Deposit Needed" alert shows up and you can't miss it</li>
@@ -119,8 +119,8 @@
     </ul>
 
     <h2>Tills Detail View</h2>
-    <p>When managers need more detail, the Tills page gives them the full picture. It's a data table with every till across the store: terminal number, status, start time, last audit, operator, loan amount, and balances. Tabs let you switch between Active Tills and History so you can see what's happening now or look back at closed tills from previous shifts.</p>
-    <p>The "Open Till" action sits in the top right. Search and filter are right there. Nothing is buried. The whole thing was built using components from the AUI Design System, so it's consistent with every other table in the Admin platform.</p>
+    <p>When managers need more detail, the Tills page gives them the full picture. It's a data table with every till across the store: terminal number, status, start time, last audit, operator, loan amount, and balances. Tabs let you switch between <strong>Active Tills and History</strong> so you can see what's happening now or look back at closed tills from previous shifts.</p>
+    <p>The "Open Till" action sits in the top right. Search and filter are right there. Nothing is buried. The whole thing was <strong>built using components from the AUI Design System</strong>, so it's consistent with every other table in the Admin platform.</p>
 
     <div class="image-row">
       <div class="laptop-mockup">
@@ -138,14 +138,14 @@
     </div>
 
     <h2>Audit Flow</h2>
-    <p>The audit flow was probably the biggest improvement. Previously, counting a till involved navigating through multiple screens and manually entering totals without much structure. I redesigned it as a single-page guided form that walks the user through every category of cash in the till:</p>
+    <p>The audit flow was probably the biggest improvement. Previously, counting a till involved navigating through multiple screens and manually entering totals without much structure. I redesigned it as <strong>a single-page guided form</strong> that walks the user through every category of cash in the till:</p>
     <ul>
       <li><strong>Cash:</strong> Bills by denomination ($1 through $100) and change by type (pennies through quarters), each with quantity and total amount fields. The actual amount from the system is shown at the top so you can compare as you count</li>
       <li><strong>Checks:</strong> Add checks by type with individual amounts. Running total calculates automatically</li>
       <li><strong>Miscellaneous Quantity:</strong> Online MO, manufacturer coupons, smartcard MO. Things that aren't cash but still need to be counted</li>
       <li><strong>Miscellaneous Funds &amp; Foreign Currency:</strong> Vouchers and foreign currency entries for stores that handle international payments</li>
     </ul>
-    <p>The whole thing has a Pause button so the user can step away without losing their count, and a Continue button to submit. No more starting over because you had to help a customer mid-audit.</p>
+    <p>The whole thing has a <strong>Pause button</strong> so the user can step away without losing their count, and a Continue button to submit. No more starting over because you had to help a customer mid-audit.</p>
 
     <h2>Safe Overview</h2>
     <p>The Safe page is where managers go to understand the full picture of what's in the safe and what needs to happen with it. I designed it with three tabs: Safe Overview, Deposit History, and Tender Types.</p>
@@ -169,7 +169,7 @@
 
     <h2>Tender Types &amp; Store Accounts</h2>
     <p>The Tender Types tab gives managers a detailed breakdown of every type of payment sitting in the safe. Cash Payments, Check Payments, Foreign Currency, Paper Gift Cards, Pay Outs. Each one shows the total amount and transaction count, and you can expand any category to see line-by-line detail down to individual denominations.</p>
-    <p>This was important because managers were constantly asked questions like "how much cash do we actually have in the safe right now?" and the answer used to require pulling reports from multiple places. Now it's one click. The detail view shows every denomination, date, account number, quantity, and amount. You can print or download the data directly from the page.</p>
+    <p>This was important because managers were constantly asked questions like "how much cash do we actually have in the safe right now?" and the answer used to require pulling reports from multiple places. <strong>Now it's one click.</strong> The detail view shows every denomination, date, account number, quantity, and amount. You can print or download the data directly from the page.</p>
 
     <div class="image-row">
       <div class="laptop-mockup">
@@ -189,11 +189,11 @@
     <h2>Results</h2>
     <p>Cash Management shipped as part of the Administration platform and is actively used by major retail customers. Here's what changed:</p>
     <ul>
-      <li>The dashboard consolidated what used to take 3-4 separate screens into a single view</li>
-      <li>Till status is now readable at a glance with color-coded badges instead of text-only indicators</li>
-      <li>The audit flow cut the number of steps roughly in half by putting everything on one structured page</li>
-      <li>Safe deposit alerts are now front and center on the dashboard, reducing the chance of managers missing a required deposit</li>
-      <li>Built entirely on the AUI Design System, so every component is consistent with the rest of the Admin suite</li>
+      <li><strong>Consolidated 3–4 separate screens into a single view</strong></li>
+      <li>Till status is now <strong>readable at a glance</strong> with color-coded badges instead of text-only indicators</li>
+      <li>The audit flow <strong>cut the number of steps roughly in half</strong> by putting everything on one structured page</li>
+      <li>Safe deposit alerts are now <strong>front and center on the dashboard</strong>, reducing the chance of managers missing a required deposit</li>
+      <li>Built entirely on the <strong>AUI Design System</strong>, so every component is consistent with the rest of the Admin suite</li>
     </ul>
 
     <div class="ux-takeaways">

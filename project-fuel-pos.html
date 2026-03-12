@@ -60,8 +60,8 @@
   <section class="project-content">
 
     <h2>Overview</h2>
-    <p>The Fuel POS system is the touchscreen that gas station cashiers use all day, every day. It handles pump monitoring, prepay transactions, in-store sales, loyalty programs, product catalogs. All of it, on one screen, hundreds of times per shift.</p>
-    <p>The problem was that the interface had been built up over years without much design direction. Layouts were dense, patterns were inconsistent, and even basic tasks like processing a prepay took way too many taps. I was brought on to redesign the core experience so it could actually keep up with the pace cashiers work at.</p>
+    <p>The Fuel POS system is the touchscreen that gas station cashiers use all day, every day. It handles <strong>pump monitoring, prepay transactions, in-store sales, loyalty programs, product catalogs.</strong> All of it, on one screen, hundreds of times per shift.</p>
+    <p>The problem was that the interface had been built up over years without much design direction. Layouts were dense, patterns were inconsistent, and even basic tasks like processing a prepay took way too many taps. I was brought on to <strong>redesign the core experience</strong> so it could actually keep up with the pace cashiers work at.</p>
 
     <div class="image-row">
       <div class="pos-device-group">
@@ -82,10 +82,10 @@
     <p>Think about what a gas station cashier is juggling at any given moment. They're watching fuel pumps, ringing up snacks and drinks, applying loyalty discounts, handling prepay transactions, and dealing with pump alerts. Sometimes all at once. The system needs to show the right thing at the right time without burying them in information.</p>
     <p>Here's what we were working with:</p>
     <ul>
-      <li>Cashiers had to keep an eye on up to 16 pumps while also processing in-store sales</li>
-      <li>Prepay workflows took too many steps, which slowed the line down during rush hours</li>
-      <li>Pump status indicators all kind of looked the same. Idle, active, stopped, alert: they blended together</li>
-      <li>The sales palette and product catalog weren't organized well, so cashiers were constantly hunting for common items</li>
+      <li>Cashiers had to <strong>keep an eye on up to 16 pumps</strong> while also processing in-store sales</li>
+      <li><strong>Prepay workflows took too many steps</strong>, which slowed the line down during rush hours</li>
+      <li>Pump status indicators all kind of looked the same. <strong>Idle, active, stopped, alert: they blended together</strong></li>
+      <li>The sales palette and product catalog weren't organized well, so cashiers were <strong>constantly hunting for common items</strong></li>
     </ul>
 
     <h2>Design Approach</h2>
@@ -95,7 +95,7 @@
       <li><strong>Minimal taps:</strong> The stuff cashiers do most often (prepay, product lookup, payment) should take as few taps as possible</li>
       <li><strong>Error recovery:</strong> Anything destructive like a void, refund, or stopping a pump needs clear confirmation and an easy way to undo it</li>
     </ul>
-    <p>I redesigned the pump grid with color-coded status indicators. Green for active, yellow for alert, red for stopped, neutral for idle. Each pump card now shows gallons, dollar amount, and fuel type right on the surface. No tapping in just to see basic info.</p>
+    <p>I redesigned the pump grid with <strong>color-coded status indicators.</strong> Green for active, yellow for alert, red for stopped, neutral for idle. Each pump card now shows <strong>gallons, dollar amount, and fuel type right on the surface.</strong> No tapping in just to see basic info.</p>
 
     <div class="image-row">
       <div class="pos-device-group">
@@ -113,7 +113,7 @@
     </div>
 
     <h2>Key Flows</h2>
-    <p>Prepay was the number one priority. Customers paying for fuel at the register is one of the most common transactions, but the old flow needed 6+ taps and required the cashier to mentally track which pump the customer was parked at. That's a lot of room for error when there's a line out the door.</p>
+    <p>Prepay was the number one priority. Customers paying for fuel at the register is one of the most common transactions, but the old flow <strong>needed 6+ taps</strong> and required the cashier to mentally track which pump the customer was parked at. That's a lot of room for error when there's a line out the door.</p>
     <p>Here's what the redesigned prepay flow includes:</p>
     <ul>
       <li>Quick-select denomination buttons ($5, $10, $20, $100) plus a custom amount keypad</li>
@@ -124,22 +124,22 @@
     <p>I also redesigned the pump detail view. It now shows transaction history, active pump controls (Prepay, Pre-Set, Transfer, Suppress, Refund, Reauthorize), and real-time dispensing data without pulling the cashier away from the main screen.</p>
 
     <h2>AI-Assisted Design</h2>
-    <p>This project was where I really leaned into AI as a design tool. Most of the Fuel POS work was done using Claude Code and Figma Make AI, and it changed how fast I could move through the entire process.</p>
+    <p>This project was where I really leaned into <strong>AI as a design tool.</strong> Most of the Fuel POS work was done using Claude Code and Figma Make AI, and it <strong>changed how fast I could move</strong> through the entire process.</p>
     <p><strong>Personas:</strong> I used AI to help generate and refine our user personas. I fed in what we knew from stakeholder interviews and existing research, and used Claude to draft detailed persona profiles. It gave me a strong starting point that I could validate and adjust with the team instead of spending days writing personas from scratch.</p>
     <p><strong>Affinity Mapping:</strong> After gathering research inputs, I used AI to help cluster and organize themes from user feedback and stakeholder conversations. It surfaced patterns I might have missed and helped me move from raw notes to structured insights faster than doing it manually on a whiteboard.</p>
     <p><strong>A/B Testing:</strong> I used AI to help frame our A/B test hypotheses, define success metrics, and structure the test plans. When results came in, it helped me analyze the data and pull out the key takeaways without getting lost in spreadsheets.</p>
     <p><strong>Prototyping:</strong> Figma Make AI accelerated the prototyping phase. I could describe interactions and layout ideas and get working concepts to iterate on quickly. Claude Code helped me build out the interactive prototype that we used for customer demos. The combination of both tools meant I was producing polished, testable work at a pace that would normally require a bigger team.</p>
-    <p>AI didn't replace the design thinking. It removed the busywork so I could spend more time on the decisions that actually mattered.</p>
+    <p><strong>AI didn't replace the design thinking.</strong> It removed the busywork so I could spend more time on the decisions that actually mattered.</p>
 
     <h2>Results &amp; Impact</h2>
     <p>Internal testing and customer demos validated the redesign across the board:</p>
     <ul>
-      <li>Prepay flow reduced from 6+ taps to 2-3 with quick-select denominations</li>
-      <li>Estimated 35% reduction in average prepay transaction time based on usability testing</li>
-      <li>Projected onboarding time cut from 2 days to half a day based on task completion rates in testing</li>
-      <li>Pump mis-authorization risk significantly reduced through visual highlighting and confirmation patterns</li>
+      <li><strong>Prepay flow reduced from 6+ taps to 2–3</strong> with quick-select denominations</li>
+      <li>Estimated <strong>35% reduction in average prepay transaction time</strong> based on usability testing</li>
+      <li>Projected <strong>onboarding time cut from 2 days to half a day</strong> based on task completion rates in testing</li>
+      <li><strong>Pump mis-authorization risk significantly reduced</strong> through visual highlighting and confirmation patterns</li>
     </ul>
-    <p>We shared the redesigned Fuel POS experience with potential customers, and it directly contributed to signing a major US gas station chain. The designs sold the vision. Seeing a polished, interactive prototype made the product feel real and ready, and that's what closed the deal.</p>
+    <p>We shared the redesigned Fuel POS experience with potential customers, and it <strong>directly contributed to signing a major US gas station chain.</strong> The designs sold the vision. Seeing a polished, interactive prototype made the product feel real and ready, and <strong>that's what closed the deal.</strong></p>
 
     <div class="ux-takeaways">
       <h2>UX Perspectives &amp; Best Practices</h2>
