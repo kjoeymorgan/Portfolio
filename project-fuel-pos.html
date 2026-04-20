@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fuel POS Experience — Joey Morgan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -163,6 +163,14 @@
       </ul>
     </div>
 
+    <h2>Gallery</h2>
+    <div class="gallery-wall">
+      <img src="01_default_pos_empty_cart.png" alt="Default POS home with empty cart">
+      <img src="03_pump_details_available.png" alt="Pump details — available state">
+      <img src="07_prepay_callback_amount_entered.png" alt="Prepay callback with amount entered">
+      <img src="11_transfer_callback.png" alt="Transfer prepay callback">
+    </div>
+
   </section>
 
   <footer>
@@ -177,7 +185,7 @@
   <script>
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox.querySelector('img');
-    document.querySelectorAll('.project-content .image-row img, .project-hero .hero-mockup img').forEach(img => {
+    document.querySelectorAll('.project-content .image-row img, .project-hero .hero-mockup img, .gallery-wall img').forEach(img => {
       img.addEventListener('click', () => {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
